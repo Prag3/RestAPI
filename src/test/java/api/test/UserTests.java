@@ -1,6 +1,7 @@
 package api.test;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -16,7 +17,7 @@ public class UserTests {
 	Faker faker; 
 	User userPayload;
 	
-	@BeforeMethod
+	@BeforeClass
 	public void setupData() {
 		faker = new Faker();
 		
@@ -29,7 +30,7 @@ public class UserTests {
 		userPayload.setEmail(faker.internet().safeEmailAddress());
 		userPayload.setPassword(faker.internet().password(5, 10));
 		userPayload.setPhone(faker.phoneNumber().cellPhone());
-//		System.out.println(userPayload.getFirstname());
+
 	}
 	
 	@Test(priority=1)
@@ -48,6 +49,28 @@ public class UserTests {
 		response.then().log().all();
 		Assert.assertEquals(response.getStatusCode(), 200);	
 	}
+	
+	@Test(priority=3)
+	public void testUpdateUser() {
+		
+		userPayload.setPhone(faker.phoneNumber().cellPhone());
+		userPayload.setEmail(faker.internet().safeEmailAddress());
+		
+		Response response = UserEndpoints.updateUser(this.userPayload.getUsername(), userPayload);
+		response.then().log().all();
+//		response.then().log().body().statusCode(200);
+		Assert.assertEquals(response.getStatusCode(), 200);
+	}
+	
+	@Test(priority=4)
+	public void testDeleteUserByName() {
+		
+		Response response = UserEndpoints.deleteUser(this.userPayload.getUsername());
+		
+		Assert.assertEquals(response.getStatusCode(), 200);
+		
+	}
+	
 	
 	
 }

@@ -30,7 +30,6 @@ public class UserEndpoints {
 								.pathParam("username", userName)
 							.when()
 								.get(Routes.get_url);
-		
 		return response;
 	}
 	
@@ -44,7 +43,6 @@ public class UserEndpoints {
 							
 							.when()
 								.put(Routes.update_url);
-		
 		return response;
 								
 	}
