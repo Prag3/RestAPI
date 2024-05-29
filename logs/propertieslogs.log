@@ -14,3 +14,11 @@
 [INFO ] 2024-05-27 08:39:03.665 [main] UserTestsByPropertiesFile - --------Executing testGetUserByName method----------
 [INFO ] 2024-05-27 08:39:04.875 [main] UserTestsByPropertiesFile - --------Executing testUpdateUser method----------
 [INFO ] 2024-05-27 08:39:06.017 [main] UserTestsByPropertiesFile - --------Executing testDeleteUserByName method----------
+[INFO ] 2024-05-28 08:03:05.759 [main] UserTests - --------Executing testPostUser method----------
+[INFO ] 2024-05-28 08:03:10.229 [main] UserTests - --------Executing testGetUserByName method----------
+[INFO ] 2024-05-28 08:03:11.776 [main] UserTests - --------Executing testUpdateUser method----------
+[INFO ] 2024-05-28 08:03:13.595 [main] UserTests - --------Executing testDeleteUserByName method----------
+[INFO ] 2024-05-29 07:49:04.901 [main] UserTests - --------Executing testPostUser method----------
+[INFO ] 2024-05-29 07:49:09.000 [main] UserTests - --------Executing testGetUserByName method----------
+[INFO ] 2024-05-29 07:49:10.237 [main] UserTests - --------Executing testUpdateUser method----------
+[INFO ] 2024-05-29 07:49:11.479 [main] UserTests - --------Executing testDeleteUserByName method----------
